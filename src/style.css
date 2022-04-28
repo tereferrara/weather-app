@@ -26,22 +26,26 @@ color:yellow;
 size:30px;
 text-align: center;
 margin: 10px auto;
+line-height: 5px;
 }
 h2{
 color:azure;
 size:15px;
 text-align: center;
+line-height: 5px;
 }
 h3{
 color:azure;
-size:13px;
-text-align: center;   
+size:15px;
+text-align: center; 
+line-height: 5px;  
 }
 row{
 color:aliceblue;
 size:18px;
 text-align:center;
-font-weight:bold;
+font-weight:bolder;
+line-height: 5px;
 }
 img{
 max-width: 10%;
