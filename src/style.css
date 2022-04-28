@@ -8,7 +8,7 @@ padding: 20px;
     border:2px solid lightgoldenrodyellow;
     border-radius: 5px;
     margin: 20px 20px;
-    padding: 10px 10px;
+    padding: 20px 20px;
     line-height: 5px;
     text-align: center;
 }
@@ -23,11 +23,17 @@ h1 {
 color:yellow;
 size:30px;
 text-align: center;
+margin: 10px auto;
 }
-h2,h3{
+h2{
 color:azure;
 size:15px;
 text-align: center;
+}
+h3{
+color:azure;
+size:13px;
+text-align: center;   
 }
 row{
 color:aliceblue;
