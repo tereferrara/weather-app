@@ -34,6 +34,6 @@ font-weight:bold;
 img{
 max-width: 10%;
 margin: 0 auto;
-padding: 10px;
+padding: 10px auto;
 display:block;
 }
