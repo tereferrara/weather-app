@@ -36,11 +36,12 @@ color:aquamarine;
 font-size:18px;
 text-align: center;   
 }
-row{
+.row{
 color:aliceblue;
 font-size:15px;
 text-align:center;
 font-weight:bold;
+line-height: 5px;
 }
 img{
 max-width: 10%;
