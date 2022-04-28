@@ -2,10 +2,13 @@ weather-app{
 width:600px;
 margin: 0 auto;
 padding: 20px;
-border:20px solid lightgoldenrodyellow;
-border-radius: 10px;
-margin: 20px auto;
-padding: 50px auto;
+
+}
+.container-wrapper{
+    border:20px solid lightgoldenrodyellow;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 50px auto;
 }
 
 body{
@@ -21,7 +24,7 @@ text-align: center;
 }
 h2,h3{
 color:azure;
-size:20px;
+size:15px;
 text-align: center;
 }
 row{
