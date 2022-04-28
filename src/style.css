@@ -10,6 +10,7 @@ padding: 20px;
     margin: 20px 20px;
     padding: 10px 10px;
     line-height: 5px;
+    text-align: center;
 }
 
 body{
@@ -37,6 +38,6 @@ font-weight:bold;
 img{
 max-width: 10%;
 margin: 0 auto;
-padding: 10px auto;
+padding: 10px 10px;
 display:block;
 }
