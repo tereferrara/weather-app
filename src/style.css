@@ -22,23 +22,23 @@ text-align:center;
 }
 h1 {
 color:yellow;
-size:20px;
+font-size:30px;
 text-align: center;
 margin: 10px auto;
 }
 h2{
 color:azure;
-size:1px;
+font-size:20px;
 text-align: center;
 }
 h3{
 color:azure;
-size:10px;
+font-size:18px;
 text-align: center;   
 }
 row{
 color:aliceblue;
-size:10px;
+font-size:15px;
 text-align:center;
 font-weight:bold;
 }
