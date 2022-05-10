@@ -7,12 +7,13 @@ weather-app {
 
 .container-wrapper {
     max-width: 800px;
-    border: 2px solid lightgoldenrodyellow;
+    border: 2px solid lightcyan;
     border-radius: 5px;
     margin: 0 auto;
     padding: 15px 15px;
     line-height: 5px;
     text-align: center;
+    
 }
 
 body {
@@ -24,33 +25,36 @@ body {
 }
 
 h1 {
-    color: yellow;
+    color: lightcyan;
     font-size: 40px;
     text-align: center;
     margin: 10px auto;
     padding: 20px 20px;
+    text-transform: capitalize;
+    font-weight: bolder;
 }
 
 h2 {
-    color: aquamarine;
+    color: lightgray;
     font-size: 20px;
     text-align: center;
 }
 
 h3, h4{
-    color: aquamarine;
+    color: lightgray;
     font-size: 18px;
     text-align: center;
 }
 
 .row {
-    color: aliceblue;
+    color: lightgray;
     font-size: 15px;
     text-align: center;
     font-weight: bold;
     line-height: 5px;
     padding-top: 30px;
-    padding-bottom: 5px;
+    padding-bottom: 30px;
+    margin:0 auto;
 }
 
 img {
@@ -62,4 +66,12 @@ img {
 
 footer {
     padding-top: 10px;
+}
+
+.col-3 {
+ padding: 0 auto;
+ font-size: 20px;
+ margin: 0 auto;
+ line-height: 20px;
+
 }
