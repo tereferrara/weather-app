@@ -55,10 +55,23 @@ function displayFar(event){
     let temperatureElement = document.querySelector("#temperature");
     let ftemp = (celsiusTemp *9)/5 + 32;
     temperatureElement.innerHTML= Math.round(ftemp);
+    let far= document.querySelector("#f-link");
+    far.classList.add("active");
+    let cels= document.querySelector("#c-link");
+    cels.classList.remove("active");
     
 }
 let celsiusTemp= null;
 
+function displayCels(event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    temperatureElement.innerHTML =Math.round(celsiusTemp);
+    let far= document.querySelector("#f-link");
+    far.classList.remove("active");
+    let cels= document.querySelector("#c-link");
+    cels.classList.add("active");
+}
 search("Paris");
 
 let form = document.querySelector("#search-form");
@@ -68,4 +81,8 @@ form.addEventListener("submit", handleSubmit);
 
 let fahrenheight = document.querySelector("#f-link");
 fahrenheight.addEventListener("click", displayFar);
+
+let celsius = document.querySelector("#c-link");
+celsius.addEventListener("click", displayCels);
+
 
