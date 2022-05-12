@@ -23,6 +23,9 @@ function displayTemperature(response) {
     let windspeedElement = document.querySelector(`#windspeed`);
     let dateElement = document.querySelector(`.currentTime`);
     let iconElement = document.querySelector(`#icon`);
+
+    celsiusTemp= (response.data.main.temp);
+
     temperatureElement.innerHTML = Math.round(response.data.main.temp);
     cityElement.innerHTML = (response.data.name);
     descriptionElement.innerHTML = (response.data.weather[0].description);
@@ -32,6 +35,8 @@ function displayTemperature(response) {
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
 }
+
+
 
 function search(city) {
     let apiKey = "09d4e7600a7b696d5e69d0366d8b8483";
@@ -45,6 +50,15 @@ function handleSubmit(event) {
     search(cityInputElement.value);
 }
 
+function displayFar(event){
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature");
+    let ftemp = (celsiusTemp *9)/5 + 32;
+    temperatureElement.innerHTML= Math.round(ftemp);
+    
+}
+let celsiusTemp= null;
+
 search("Paris");
 
 let form = document.querySelector("#search-form");
@@ -52,5 +66,6 @@ console.log(form)
 form.addEventListener("submit", handleSubmit);
 
 
-
+let fahrenheight = document.querySelector("#f-link");
+fahrenheight.addEventListener("click", displayFar);
 
