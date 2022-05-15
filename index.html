@@ -1,54 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <title>Weather</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="src/style.css" />
-  <title>Weather</title>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-</head>
-
-<body>
-
-  <div class="Container">
-    <h1>Weather app</h1>
-    <div class="container-wrapper">
-      <form id="search-form" class="mb-3">
+  <body>
+    <div class="Container">
+      <h1>Weather app</h1>
+      <div class="container-wrapper">
+        <form id="search-form" class="mb-3">
+          <div class="row">
+            <div class="col-9">
+              <input
+                type="search"
+                placeholder="Type a city here..."
+                class="form-control"
+                id="city-input"
+              />
+            </div>
+            <div class="col-3">
+              <input
+                type="submit"
+                value="search"
+                class="btn btn-primary w-100"
+              />
+            </div>
+          </div>
+        </form>
+        <h2>
+          <div class="currentTime">Time</div>
+          The weather today in <strong id="city">London</strong>
+        </h2>
+        <h3>
+          Current Temperature: <strong id="temperature"> 8°</strong>
+          <small>
+            <a href="#" id="c-link" class="active tempSelect">°C</a>
+            <a href="#" id="f-link" class="tempSelect">°F</a></small
+          >
+        </h3>
+        <h4>
+          Weather description: <strong id="weatherDescription"> sunny</strong>
+        </h4>
+        <div></div>
         <div class="row">
-          <div class="col-9">
-            <input type="search" placeholder="Type a city here..." class="form-control" id="city-input" />
+          <div class="col-6">
+            Current humidity: <span id="humidity"> 22</span>%
           </div>
-          <div class="col-3">
-            <input type="submit" value="search" class="btn btn-primary w-100" />
+          <div class="col-6">
+            Current wind speed: <span id="windspeed"> 8</span>km/h
           </div>
-      </form>
-    </div>
-    <h2>
-      <div class="currentTime">Time</div>The weather today in <strong id="city">London</strong>
-    </h2>
-    <h3>Current Temperature: <strong id="temperature"> 8°</strong> <small> <a href="#" id="c-link" class="active tempSelect">°C</a>
-    <a href="#" id="f-link" class="tempSelect" >°F</a></small></h3>
-    <h4>Weather description: <strong id="weatherDescription"> sunny</strong></h4>
-    <div></div>
-    <div class="row">
-      <div class="col-6">
-        Current humidity: <span id="humidity"> 22</span>%
-      </div>
-      <div class="col-6">
-        Current wind speed: <span id="windspeed"> 8</span>km/h
-      </div>
-    </div>
-    <span>
-      <img id="icon" src="http://openweathermap.org/img/wn/04d@2x.png" /></span>
-  </div>
-  <footer>Coded by Teresa Ferrara <a href="https://github.com/tereferrara/weather-app" target="_blank">Open source</a>
-  </footer>
-  </div>
-  <script src="src/index.js"></script>
-</body>
+        </div>
+        <span>
+          <img id="icon" src="http://openweathermap.org/img/wn/04d@2x.png"
+        /></span>
 
+        <div class="weather-forecast" id="forecast">
+         
+      </div></div>
+      <footer>
+        Coded by Teresa Ferrara
+        <a href="https://github.com/tereferrara/weather-app" target="_blank"
+          >Open source</a
+        >
+      </footer>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
 </html>
