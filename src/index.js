@@ -14,8 +14,8 @@ function formatDate(timestamp) {
 }
 
 function formatDay(timestamp){
-    let date= new Date(timestamp*1000);
-    let day=getDay();
+    let date= new Date (timestamp*1000);
+    let day = date.getDay();
     let days =["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[day];
 
@@ -39,9 +39,9 @@ function displayForecast(response) {
           />
           ${Math.round(forecastday.temp.min)}°C/${Math.round(forecastday.temp.max)} °C
         </div>
-        }
-    `;
-    }})
+        
+        `};
+    })
     
 
 
@@ -51,7 +51,7 @@ forecastElement.innerHTML= forecastHTML;
 function getForecast (coordinates){
     console.log(coordinates);
     let apiKey = "09d4e7600a7b696d5e69d0366d8b8483";
-    let apiUrl=`https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     console.log(apiUrl);
     axios.get(apiUrl).then(displayForecast);
 }
@@ -64,6 +64,7 @@ function displayTemperature(response) {
     let windspeedElement = document.querySelector(`#windspeed`);
     let dateElement = document.querySelector(`.currentTime`);
     let iconElement = document.querySelector(`#icon`);
+
 
     celsiusTemp= (response.data.main.temp);
 
@@ -81,7 +82,7 @@ function displayTemperature(response) {
 
 
 function search(city) {
-    let apiKey = "009d4e7600a7b696d5e69d0366d8b8483";
+    let apiKey = "09d4e7600a7b696d5e69d0366d8b8483";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(displayTemperature);
 }
@@ -94,6 +95,7 @@ function handleSubmit(event) {
 
 function displayFar(event){
     event.preventDefault();
+    let apiKey = "09d4e7600a7b696d5e69d0366d8b8483";
     let temperatureElement = document.querySelector("#temperature");
     let ftemp = (celsiusTemp *9)/5 + 32;
     temperatureElement.innerHTML= Math.round(ftemp);
